@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/redbr/CLionProjects/Software_project_19476496/game_init.h
+
+C:/Users/redbr/CLionProjects/Software_project_19476496/input_output.h
+game_init.h
+C:/Users/redbr/CLionProjects/Software_project_19476496/game_init.h
+
+C:/Users/redbr/CLionProjects/Software_project_19476496/main.c
+stdio.h
+-
+input_output.h
+C:/Users/redbr/CLionProjects/Software_project_19476496/input_output.h
+

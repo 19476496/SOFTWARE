@@ -1,0 +1,3 @@
+C:/Users/redbr/CLionProjects/Software_project_19476496/cmake-build-debug/CMakeFiles/Software_project_19476496.dir
+C:/Users/redbr/CLionProjects/Software_project_19476496/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/redbr/CLionProjects/Software_project_19476496/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -72,9 +72,52 @@ void place_reserve(square *s, player players[],int cur)
 
         if(s->num_pieces > 5)             //If the stack we placed the reserve on to was size 5 we must free the last piece
         {
-            //lim_5(s,players,cur);         //function lim_5 limits the stack to only 5 pieces gathering info about excess pieces
+            lim_5(s,players,cur);         //function lim_5 limits the stack to only 5 pieces gathering info about excess pieces
             return;
 
         }
     }
+}
+
+void lim_5(square *s, player players[],int cur){
+
+    piece* curr=NULL;
+    curr = s->stack; //curr is given the position of the stack passed in in the arguments
+    int count = 1;
+    piece *last = NULL;  // last is used if we reach 5 pieces we then set last->next to point to null to finish the stack
+    while (curr != NULL) // moving until we reach the end of athestack
+    {
+        if (count < 5)
+        {
+
+            curr = curr->next; //moving until we reach the 5th member of the list
+            count++;
+        }
+        else
+        {
+            last = curr; //if we do have more than 5 in the list then we keep track of where the 5th element is
+        }
+        if (last != NULL)
+        {
+            curr = curr->next;
+            piece *toremove; //to remove will be used to free up memory
+            while (curr != NULL)
+            {
+                toremove = curr;
+                if (players[cur].player_color == curr->p_color)
+                {
+                    players[cur].reserves++; // if the piece on the bottom of the stack is our colour then we gain a reserve
+                }
+                if (players[(cur+1)%2].player_color == curr->p_color)
+                {
+                    players[cur].destroyed++;// if the piece was an enemies it is destroyed and they cant get it back
+                }
+                curr = curr->next;
+                free(toremove); //to remove is freed
+                s->num_pieces = 5;
+            }
+            last->next = NULL;
+        }
+    }
+    return;
 }

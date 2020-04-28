@@ -7,9 +7,39 @@
 //
 
 #include <stdlib.h>
+#include <stdio.h>
 #include "game_init.h"
 //function to get info about players
 void initialize_players(player players[PLAYERS_NUM]){
+
+    char colour; //colour holds the users colour value they wish to use
+    printf("Please enter info about each player\nPLayer1:\n");
+    printf("Name:");
+    fgets(players[0].player_name,50,stdin);
+    printf("Colour of Player1(r for red g for green): ");
+    scanf(" %c",&colour);
+
+    if(colour == 'r')//providing the user presses r this if will execute
+    {
+        printf("PLayer 1 will be red and player 2 will be green.\n");
+        players[0].player_color = RED;
+        players[1].player_color = GREEN;
+    }
+    else //should they not press r this will execute
+    {
+        printf("PLayer 1 will be green and player 2 will be red.\n");
+        players[0].player_color = GREEN;
+        players[1].player_color = RED;
+    }
+    players[0].reserves = 0; //reserves are special pieces used to
+    players[1].reserves = 0;
+    players[0].destroyed = 0;
+    players[1].destroyed = 0;
+    players[0].total_pieces = 18;
+    players[1].total_pieces = 18;
+    printf("Player 2:\nName:");
+    fflush(stdin);
+    fgets(players[1].player_name,50,stdin);
 }
 
 //Set Invalid Squares (where it is not possible to place stacks)

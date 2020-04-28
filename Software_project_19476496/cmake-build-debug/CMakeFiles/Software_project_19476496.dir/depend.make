@@ -12,6 +12,7 @@ CMakeFiles/Software_project_19476496.dir/game_start.c.obj: ../print_board.h
 
 CMakeFiles/Software_project_19476496.dir/input_output.c.obj: ../game_init.h
 CMakeFiles/Software_project_19476496.dir/input_output.c.obj: ../input_output.c
+CMakeFiles/Software_project_19476496.dir/input_output.c.obj: ../input_output.h
 CMakeFiles/Software_project_19476496.dir/input_output.c.obj: ../print_board.h
 
 CMakeFiles/Software_project_19476496.dir/main.c.obj: ../game_init.h

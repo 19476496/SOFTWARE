@@ -2,6 +2,7 @@
 // Created by redbr on 28/04/2020.
 //
 #include <stdio.h>
+#include <stdlib.h>
 #include "change_stack.h"
 void push(square board[8][8], player players[],int cur)
 {
@@ -32,4 +33,48 @@ void push(square board[8][8], player players[],int cur)
     //lim_5(&board[players[cur].destination_piece[0]][players[cur].destination_piece[1]],players,cur);
 
     return;
+}
+void place_reserve(square *s, player players[],int cur)
+{
+    if(s->stack == NULL)              // if the location in which we place the reserve is an empty piece
+    {                                 // The total amount of our visible pieces not in stacks or reserves goes up
+        players[cur].total_pieces++;
+    }
+
+    else if(s->stack->p_color == players[cur].player_color)
+    {                                   //If we place the stack on one of our own colours we reduce the total visible by 1
+        players[cur].total_pieces--;
+    }
+    else  if(s->stack->p_color == players[(cur+1)%2].player_color) // (cur+1)%2 produces the opposite players value if cur = player 0
+        //(cur+1)%2 = player 1
+    {
+        players[(cur+1)%2].total_pieces--;
+    }// If we place a reserve on an enemies piece we reduce their total visible by 1
+
+
+    players[cur].reserves--; // the user has used one of their reserves
+    if (s->stack == NULL)                               //if we are placing on an empty piece
+    {
+        s->stack = (piece *)malloc(sizeof(piece));      //creating the piece node and allocating it to the location
+        s->stack->p_color = players[cur].player_color;  //settings its colour
+        s->stack->next = NULL;                          //ensuring it points to nothing
+        s->num_pieces = 1;                              //Declaring num_pieces to 1
+        return;
+    }
+    else
+    {
+        piece *curr;                                //however if we place on an existing stack or piece
+        curr = (piece *)malloc(sizeof(piece));      //we define and create a node like normal
+        curr->p_color =players[cur].player_color;
+        curr->next = s->stack;                      //however we let the pointer point to the top of the stack located in the board position
+        s->stack = curr;                            //The position is now updated so that the top is the reserve piece
+        s->num_pieces++;                            //Total pieces in that stack increases
+
+        if(s->num_pieces > 5)             //If the stack we placed the reserve on to was size 5 we must free the last piece
+        {
+            //lim_5(s,players,cur);         //function lim_5 limits the stack to only 5 pieces gathering info about excess pieces
+            return;
+
+        }
+    }
 }

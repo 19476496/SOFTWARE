@@ -42,6 +42,18 @@ void select_piece(square board[8][8], player players[],int cur)
             case ('d'):
                 players[cur].destination_piece[1]++;
                 break;
+            case ('r'):
+                if (players[cur].reserves == 0)
+                {
+                    printf("|||||There are no reserves|||||||\n");
+                }
+                else
+                {
+                    place_reserve(&board[players[cur].destination_piece[0]][players[cur].destination_piece[1]],players,cur);
+                    return; //calling reserve function to place reserves
+                }
+
+                break;
             case ('f'):
 
                 if (board[players[cur].destination_piece[0]][players[cur].destination_piece[1]].stack == NULL)

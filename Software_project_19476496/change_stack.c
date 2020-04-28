@@ -16,7 +16,6 @@ void place_reserve(square *s, player players[],int cur)
         players[cur].total_pieces--;
     }
     else  if(s->stack->p_color == players[(cur+1)%2].player_color) // (cur+1)%2 produces the opposite players value if cur = player 0
-        //(cur+1)%2 = player 1
     {
         players[(cur+1)%2].total_pieces--;
     }// If we place a reserve on an enemies piece we reduce their total visible by 1
@@ -51,13 +50,16 @@ void place_reserve(square *s, player players[],int cur)
 
 void push(square board[8][8], player players[],int cur)
 {
-    if(board[players[cur].destination_piece[0]][players[cur].destination_piece[1]].num_pieces == players[cur].player_color)
-    {   //if the location of where we put our piece had one of our pieces facing up the total no.goes down
-        players[cur].total_pieces--;
-    }
-    if(board[players[cur].destination_piece[0]][players[cur].destination_piece[1]].num_pieces == players[(cur+1)%2].player_color)
-    {   //Alternatively if we placed the stack onto a stack with an enemies piece facing up they lose 1 visible piece
-        players[(cur+1)%2].total_pieces--;
+    if(board[players[cur].destination_piece[0]][players[cur].destination_piece[1]].stack != NULL) {
+        if (board[players[cur].destination_piece[0]][players[cur].destination_piece[1]].stack->p_color ==
+            players[cur].player_color) {   //if the location of where we put our piece had one of our pieces facing up the total no.goes down
+            players[cur].total_pieces--;
+        }
+        if (board[players[cur].destination_piece[0]][players[cur].destination_piece[1]].stack->p_color ==
+            players[(cur + 1) %
+                    2].player_color) {   //Alternatively if we placed the stack onto a stack with an enemies piece facing up they lose 1 visible piece
+            players[(cur + 1) % 2].total_pieces--;
+        }
     }
 
     //updating number of pieces in the stack that we are placing the moved stack onto
@@ -73,10 +75,11 @@ void push(square board[8][8], player players[],int cur)
     //when it reaches null we change it so it instead points to the top of the desintation piece on the board
     curr->next = board[players[cur].destination_piece[0]][players[cur].destination_piece[1]].stack;
     board[players[cur].destination_piece[0]][players[cur].destination_piece[1]].stack = top;
-
+    set_empty(&board[players[cur].current_piece[0]][players[cur].current_piece[1]]);
     //we make sure to limit the pieces to 5 in case there were more than 5
-    lim_5(&board[players[cur].destination_piece[0]][players[cur].destination_piece[1]],players,cur);
-
+    if(board[players[cur].destination_piece[0]][players[cur].destination_piece[1]].num_pieces >5) {
+        lim_5(&board[players[cur].destination_piece[0]][players[cur].destination_piece[1]], players, cur);
+    }
     return;
 }
 
@@ -84,13 +87,15 @@ void split_stack(square board[8][8],player players[], int cur, int n)
 {
     piece *top = board[players[cur].current_piece[0]][players[cur].current_piece[1]].stack;
     piece *curr = board[players[cur].current_piece[0]][players[cur].current_piece[1]].stack;
-    if(board[players[cur].destination_piece[0]][players[cur].destination_piece[1]].num_pieces == players[cur].player_color)
-    {
-        players[cur].total_pieces--; // if the piece in which we move the stack onto is ours our total visible pieces go down
-    }
-    if(board[players[cur].destination_piece[0]][players[cur].destination_piece[1]].num_pieces == players[(cur+1)%2].player_color)
-    {
-        players[(cur+1)%2].total_pieces--; //alterinatively if it belongs to the enemy their visible pieces go down
+
+    if(board[players[cur].destination_piece[0]][players[cur].destination_piece[1]].stack != NULL) {
+        if (board[players[cur].destination_piece[0]][players[cur].destination_piece[1]].stack->p_color ==
+            players[cur].player_color) {
+            players[cur].total_pieces--; // if the piece we cover up is our own our total pieces go down
+        }
+        if (board[players[cur].destination_piece[0]][players[cur].destination_piece[1]].stack->p_color != players[cur].player_color) {
+            players[(cur + 1) %2].total_pieces--; //alterinatively if it belongs to the enemy their visible pieces go down
+        }
     }
 
     int counter=1;
@@ -99,26 +104,32 @@ void split_stack(square board[8][8],player players[], int cur, int n)
         curr= curr->next; //we move through the loop until we point to the where the stack should end for the n given
         counter++;
     }
+
+
     //The original location is updated to point to the bottom part of the stack which has been left behind
     board[ players[cur].current_piece[0] ]  [ players[cur].current_piece[1] ].stack =  curr->next;
+
 
     //pointer is then updated to point to the destination stack joining them together
     curr->next = board[players[cur].destination_piece[0]][players[cur].destination_piece[1]].stack;
     board[players[cur].destination_piece[0]][players[cur].destination_piece[1]].stack=top;
+
+    if(board[players[cur].current_piece[0]][players[cur].current_piece[1]].stack->p_color == players[cur].player_color)
+    {
+        players[cur].total_pieces++; // if the piece we revealed was our colour then we gain a visible piece
+    }
+    if(board[players[cur].current_piece[0]][players[cur].current_piece[1]].stack->p_color != players[cur].player_color)
+    {
+        players[(cur+1)%2].total_pieces++; //alterinatively if it belongs to the enemy their visible pieces go up
+    }
+
 
     //destination piece gained pieces, original location lost pieces
     board[players[cur].destination_piece[0]][players[cur].destination_piece[1]].num_pieces +=n;
     board[players[cur].current_piece[0]][players[cur].current_piece[1]].num_pieces -=n;
 
 
-    //since a new piece was revealed left behind it created a new visible piece
-    if(board[players[cur].current_piece[0]][players[cur].current_piece[1]].stack->p_color == players[cur].player_color)
-    {
-        players[cur].total_pieces++; // if the top of the newly created piece is our colour our visible total goes up
-    }
-    else{
-        players[(cur+1)%2].total_pieces++; // alternatively if its our enemies theirs go up
-    }
+
 //limiting to 5 pieces
     if(board[players[cur].destination_piece[0]][players[cur].destination_piece[1]].num_pieces > 5)
     {

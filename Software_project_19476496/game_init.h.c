@@ -6,11 +6,12 @@
 // Created by Lili on 24/03/2020.
 //
 
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 #include "game_init.h"
 //function to get info about players
 void initialize_players(player players[PLAYERS_NUM]){
+
     char colour; //colour holds the users colour value they wish to use
     printf("Please enter info about each player\nPLayer1:\n");
     printf("Name:");
@@ -30,7 +31,7 @@ void initialize_players(player players[PLAYERS_NUM]){
         players[0].player_color = GREEN;
         players[1].player_color = RED;
     }
-    players[0].reserves = 0; //reserves are special pieces used to
+    players[0].reserves = 0; //reserves are special pieces used to place anywhere on the board
     players[1].reserves = 0;
     players[0].destroyed = 0;
     players[1].destroyed = 0;
@@ -39,7 +40,6 @@ void initialize_players(player players[PLAYERS_NUM]){
     printf("Player 2:\nName:");
     fflush(stdin);
     fgets(players[1].player_name,50,stdin);
-
 }
 
 //Set Invalid Squares (where it is not possible to place stacks)

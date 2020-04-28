@@ -80,7 +80,7 @@ void print_loc_board(square board[BOARD_SIZE][BOARD_SIZE], player playerx, int m
         if(move !=-1) {
             if (i == 4 && j == 8) {
                 printf("|Stack being placed:");
-                print_stack(&board[playerx.destination_piece[0]][playerx.destination_piece[1]]);
+                print_stack(&board[playerx.current_piece[0]][playerx.current_piece[1]]);
                 printf("\n");
                 continue;
             }
@@ -88,6 +88,11 @@ void print_loc_board(square board[BOARD_SIZE][BOARD_SIZE], player playerx, int m
                 printf("|Moves left: %d\n", move);
                 continue;
             }
+        }
+        if(i == 6 && j == 8)
+        {
+            printf("|%d visible pieces remaining\n",playerx.total_pieces);
+            continue;
         }
         printf("|\n");
     }

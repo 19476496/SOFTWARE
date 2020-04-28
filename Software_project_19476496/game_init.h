@@ -64,4 +64,3 @@ void initialize_board(square board[BOARD_SIZE][BOARD_SIZE]);
 void set_empty(square * s);
 
 
-

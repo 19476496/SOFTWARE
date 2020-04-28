@@ -34,7 +34,8 @@ void game_Start(square board[BOARD_SIZE][BOARD_SIZE], player players[])
             won == true;
             printf("PLayer %d has won!! Well done %s ",((count+1)%2)+1,players[(count+1)%2].player_name);
             printf("The game took %d moves in total\n",count);
-            printf("They destroyed %d of the opponents pieces and was left with %d of their own\n",players[(count+1)%2].destroyed,players[(count+1)%2].total_pieces);
+            printf("They removed %d of the opponents pieces from play and was left in control of %d pieces\n",players[(count+1)%2].destroyed,players[(count+1)%2].total_pieces);
+            //removing pieces means when there was 5 in a stack and the last piece was an opponents
             printf("They were also left with %d reserves by the end of the game\n",players[(count+1)%2].reserves);
             return;
         }
@@ -42,4 +43,5 @@ void game_Start(square board[BOARD_SIZE][BOARD_SIZE], player players[])
 
         count++;
     }
+    return;
 }

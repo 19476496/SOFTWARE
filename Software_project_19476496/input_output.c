@@ -63,7 +63,7 @@ void select_piece(square board[8][8], player players[],int cur)
                 }
                 printf("Here is the stack with end being the bottom of the stack\n");//we give the user information about whats contained in the stack
                 print_stack(&board[players[cur].destination_piece[0]][players[cur].destination_piece[1]]); //prints a linked list format about the stack
-                printf("Enter the n elements you want from the stack\n");
+                printf("\nEnter the n elements you want from the top of the stack down\n");
                 scanf(" %d",&split_value);
 
                 while(split_value >= board[players[cur].destination_piece[0]][players[cur].destination_piece[1]].num_pieces) {
@@ -129,9 +129,11 @@ void move_piece(square board[8][8], player players[],int cur)
     {
         if(players[cur].destination_piece[0] > 7 || players[cur].destination_piece[0] < 0 || players[cur].destination_piece[1] > 7|| players[cur].destination_piece[1] < 0 || board[players[cur].destination_piece[0]][players[cur].destination_piece[1]].type == INVALID)
         {
-            printf("You have moved off the board or onto an invalid piece these are not usable the cursor will be reset\n");
-            players[cur].destination_piece[0] = 4;//error checking
-            players[cur].destination_piece[1] = 4;
+            printf("||||You have moved off the board or onto an invalid piece these are not usable the cursor will be reset||||\n");
+            players[cur].destination_piece[0] = players[cur].current_piece[0];
+            players[cur].destination_piece[1] = players[cur].current_piece[1];
+            int move_count = board[players[cur].current_piece[0]][players[cur].current_piece[1]].num_pieces;
+
         }
 
         print_loc_board(board,players[cur],move_count);
@@ -199,8 +201,9 @@ void split_function(square board[8][8],player players[], int cur, int n) {
             players[cur].destination_piece[1] > 7 || players[cur].destination_piece[1] < 0 ||
             board[players[cur].destination_piece[0]][players[cur].destination_piece[1]].type == INVALID) {
             printf("You have moved off the board or onto an invalid piece these are not usable the cursor will be reset\n");
-            players[cur].destination_piece[0] = 4;
-            players[cur].destination_piece[1] = 4;//error checking
+            players[cur].destination_piece[0] = players[cur].current_piece[0];
+            players[cur].destination_piece[1] = players[cur].current_piece[1];//error checking
+            move_count = n;
         }
 
         print_loc_board(board,players[cur], move_count);//print out board with current cursor location

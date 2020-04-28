@@ -6,8 +6,7 @@
 #include <stdio.h>
 
 
-void print_loc_board(square board[BOARD_SIZE][BOARD_SIZE], player playerx, int move)
-{
+void print_loc_board(square board[BOARD_SIZE][BOARD_SIZE], player playerx, int move) {
     int i;
     int j;
     for (i = 0; i < BOARD_SIZE; i++) {
@@ -54,8 +53,28 @@ void print_loc_board(square board[BOARD_SIZE][BOARD_SIZE], player playerx, int m
             printf("|Player reserves: %d\n", playerx.reserves);
             continue;
         }
+        if (i == 3 && j == 8) {
+            printf("|Stack under cursor:");
+            print_stack(&board[playerx.destination_piece[0]][playerx.destination_piece[1]]);
+            printf("\n");
+            continue;
+        }
+        if (move != -1) {
+            if (i == 4 && j == 8) {
+                printf("|Stack being placed:");
+                print_stack(&board[playerx.destination_piece[0]][playerx.destination_piece[1]]);
+                printf("\n");
+                continue;
+            }
+            if (i == 5 && j == 8) {
+                printf("|Moves left: %d\n", move);
+                continue;
+            }
 
+
+        }
         printf("|\n");
     }
-return;
+    return;
 }
+

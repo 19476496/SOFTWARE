@@ -107,6 +107,12 @@
 		<Unit filename="C:/Users/redbr/CLionProjects/Software_project_19476496/print_board.h">
 			<Option target="Software_project_19476496"/>
 		</Unit>
+		<Unit filename="C:/Users/redbr/CLionProjects/Software_project_19476496/print_stack.c">
+			<Option target="Software_project_19476496"/>
+		</Unit>
+		<Unit filename="C:/Users/redbr/CLionProjects/Software_project_19476496/print_stack.h">
+			<Option target="Software_project_19476496"/>
+		</Unit>
 		<Unit filename="C:/Users/redbr/CLionProjects/Software_project_19476496/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

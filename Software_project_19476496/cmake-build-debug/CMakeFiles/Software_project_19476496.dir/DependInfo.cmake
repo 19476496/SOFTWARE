@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "C:/Users/redbr/CLionProjects/Software_project_19476496/input_output.c" "C:/Users/redbr/CLionProjects/Software_project_19476496/cmake-build-debug/CMakeFiles/Software_project_19476496.dir/input_output.c.obj"
   "C:/Users/redbr/CLionProjects/Software_project_19476496/main.c" "C:/Users/redbr/CLionProjects/Software_project_19476496/cmake-build-debug/CMakeFiles/Software_project_19476496.dir/main.c.obj"
   "C:/Users/redbr/CLionProjects/Software_project_19476496/print_board.c" "C:/Users/redbr/CLionProjects/Software_project_19476496/cmake-build-debug/CMakeFiles/Software_project_19476496.dir/print_board.c.obj"
+  "C:/Users/redbr/CLionProjects/Software_project_19476496/print_stack.c" "C:/Users/redbr/CLionProjects/Software_project_19476496/cmake-build-debug/CMakeFiles/Software_project_19476496.dir/print_stack.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

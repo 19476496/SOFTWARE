@@ -284,6 +284,33 @@ print_board.c.s:
 	$(MAKE) -f CMakeFiles\Software_project_19476496.dir\build.make CMakeFiles/Software_project_19476496.dir/print_board.c.s
 .PHONY : print_board.c.s
 
+print_stack.obj: print_stack.c.obj
+
+.PHONY : print_stack.obj
+
+# target to build an object file
+print_stack.c.obj:
+	$(MAKE) -f CMakeFiles\Software_project_19476496.dir\build.make CMakeFiles/Software_project_19476496.dir/print_stack.c.obj
+.PHONY : print_stack.c.obj
+
+print_stack.i: print_stack.c.i
+
+.PHONY : print_stack.i
+
+# target to preprocess a source file
+print_stack.c.i:
+	$(MAKE) -f CMakeFiles\Software_project_19476496.dir\build.make CMakeFiles/Software_project_19476496.dir/print_stack.c.i
+.PHONY : print_stack.c.i
+
+print_stack.s: print_stack.c.s
+
+.PHONY : print_stack.s
+
+# target to generate assembly for a file
+print_stack.c.s:
+	$(MAKE) -f CMakeFiles\Software_project_19476496.dir\build.make CMakeFiles/Software_project_19476496.dir/print_stack.c.s
+.PHONY : print_stack.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -311,6 +338,9 @@ help:
 	@echo ... print_board.obj
 	@echo ... print_board.i
 	@echo ... print_board.s
+	@echo ... print_stack.obj
+	@echo ... print_stack.i
+	@echo ... print_stack.s
 .PHONY : help
 
 

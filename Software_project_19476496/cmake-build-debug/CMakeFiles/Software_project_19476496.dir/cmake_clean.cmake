@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Software_project_19476496.dir/input_output.c.obj"
   "CMakeFiles/Software_project_19476496.dir/main.c.obj"
   "CMakeFiles/Software_project_19476496.dir/print_board.c.obj"
+  "CMakeFiles/Software_project_19476496.dir/print_stack.c.obj"
   "Software_project_19476496.exe"
   "Software_project_19476496.exe.manifest"
   "Software_project_19476496.pdb"

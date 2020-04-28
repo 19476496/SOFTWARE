@@ -47,10 +47,10 @@ RM = "C:\Program Files\JetBrains\CLion 2019.3.3\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\redbr\CLionProjects\Software_project_19476496
+CMAKE_SOURCE_DIR = C:\Users\redbr\CLionProjects\19476496_Softwareproject_2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\redbr\CLionProjects\Software_project_19476496\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\redbr\CLionProjects\19476496_Softwareproject_2\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,9 +79,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\redbr\CLionProjects\Software_project_19476496\cmake-build-debug\CMakeFiles C:\Users\redbr\CLionProjects\Software_project_19476496\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\redbr\CLionProjects\19476496_Softwareproject_2\cmake-build-debug\CMakeFiles C:\Users\redbr\CLionProjects\19476496_Softwareproject_2\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\redbr\CLionProjects\Software_project_19476496\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\redbr\CLionProjects\19476496_Softwareproject_2\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -110,17 +110,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Software_project_19476496
+# Target rules for targets named 19476496_Softwareproject_2
 
 # Build rule for target.
-Software_project_19476496: cmake_check_build_system
-	$(MAKE) -f CMakeFiles\Makefile2 Software_project_19476496
-.PHONY : Software_project_19476496
+19476496_Softwareproject_2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 19476496_Softwareproject_2
+.PHONY : 19476496_Softwareproject_2
 
 # fast build rule for target.
-Software_project_19476496/fast:
-	$(MAKE) -f CMakeFiles\Software_project_19476496.dir\build.make CMakeFiles/Software_project_19476496.dir/build
-.PHONY : Software_project_19476496/fast
+19476496_Softwareproject_2/fast:
+	$(MAKE) -f CMakeFiles\19476496_Softwareproject_2.dir\build.make CMakeFiles/19476496_Softwareproject_2.dir/build
+.PHONY : 19476496_Softwareproject_2/fast
 
 change_stack.obj: change_stack.c.obj
 
@@ -128,7 +128,7 @@ change_stack.obj: change_stack.c.obj
 
 # target to build an object file
 change_stack.c.obj:
-	$(MAKE) -f CMakeFiles\Software_project_19476496.dir\build.make CMakeFiles/Software_project_19476496.dir/change_stack.c.obj
+	$(MAKE) -f CMakeFiles\19476496_Softwareproject_2.dir\build.make CMakeFiles/19476496_Softwareproject_2.dir/change_stack.c.obj
 .PHONY : change_stack.c.obj
 
 change_stack.i: change_stack.c.i
@@ -137,7 +137,7 @@ change_stack.i: change_stack.c.i
 
 # target to preprocess a source file
 change_stack.c.i:
-	$(MAKE) -f CMakeFiles\Software_project_19476496.dir\build.make CMakeFiles/Software_project_19476496.dir/change_stack.c.i
+	$(MAKE) -f CMakeFiles\19476496_Softwareproject_2.dir\build.make CMakeFiles/19476496_Softwareproject_2.dir/change_stack.c.i
 .PHONY : change_stack.c.i
 
 change_stack.s: change_stack.c.s
@@ -146,35 +146,35 @@ change_stack.s: change_stack.c.s
 
 # target to generate assembly for a file
 change_stack.c.s:
-	$(MAKE) -f CMakeFiles\Software_project_19476496.dir\build.make CMakeFiles/Software_project_19476496.dir/change_stack.c.s
+	$(MAKE) -f CMakeFiles\19476496_Softwareproject_2.dir\build.make CMakeFiles/19476496_Softwareproject_2.dir/change_stack.c.s
 .PHONY : change_stack.c.s
 
-game_init.h.obj: game_init.h.c.obj
+game_init.obj: game_init.c.obj
 
-.PHONY : game_init.h.obj
+.PHONY : game_init.obj
 
 # target to build an object file
-game_init.h.c.obj:
-	$(MAKE) -f CMakeFiles\Software_project_19476496.dir\build.make CMakeFiles/Software_project_19476496.dir/game_init.h.c.obj
-.PHONY : game_init.h.c.obj
+game_init.c.obj:
+	$(MAKE) -f CMakeFiles\19476496_Softwareproject_2.dir\build.make CMakeFiles/19476496_Softwareproject_2.dir/game_init.c.obj
+.PHONY : game_init.c.obj
 
-game_init.h.i: game_init.h.c.i
+game_init.i: game_init.c.i
 
-.PHONY : game_init.h.i
+.PHONY : game_init.i
 
 # target to preprocess a source file
-game_init.h.c.i:
-	$(MAKE) -f CMakeFiles\Software_project_19476496.dir\build.make CMakeFiles/Software_project_19476496.dir/game_init.h.c.i
-.PHONY : game_init.h.c.i
+game_init.c.i:
+	$(MAKE) -f CMakeFiles\19476496_Softwareproject_2.dir\build.make CMakeFiles/19476496_Softwareproject_2.dir/game_init.c.i
+.PHONY : game_init.c.i
 
-game_init.h.s: game_init.h.c.s
+game_init.s: game_init.c.s
 
-.PHONY : game_init.h.s
+.PHONY : game_init.s
 
 # target to generate assembly for a file
-game_init.h.c.s:
-	$(MAKE) -f CMakeFiles\Software_project_19476496.dir\build.make CMakeFiles/Software_project_19476496.dir/game_init.h.c.s
-.PHONY : game_init.h.c.s
+game_init.c.s:
+	$(MAKE) -f CMakeFiles\19476496_Softwareproject_2.dir\build.make CMakeFiles/19476496_Softwareproject_2.dir/game_init.c.s
+.PHONY : game_init.c.s
 
 game_start.obj: game_start.c.obj
 
@@ -182,7 +182,7 @@ game_start.obj: game_start.c.obj
 
 # target to build an object file
 game_start.c.obj:
-	$(MAKE) -f CMakeFiles\Software_project_19476496.dir\build.make CMakeFiles/Software_project_19476496.dir/game_start.c.obj
+	$(MAKE) -f CMakeFiles\19476496_Softwareproject_2.dir\build.make CMakeFiles/19476496_Softwareproject_2.dir/game_start.c.obj
 .PHONY : game_start.c.obj
 
 game_start.i: game_start.c.i
@@ -191,7 +191,7 @@ game_start.i: game_start.c.i
 
 # target to preprocess a source file
 game_start.c.i:
-	$(MAKE) -f CMakeFiles\Software_project_19476496.dir\build.make CMakeFiles/Software_project_19476496.dir/game_start.c.i
+	$(MAKE) -f CMakeFiles\19476496_Softwareproject_2.dir\build.make CMakeFiles/19476496_Softwareproject_2.dir/game_start.c.i
 .PHONY : game_start.c.i
 
 game_start.s: game_start.c.s
@@ -200,7 +200,7 @@ game_start.s: game_start.c.s
 
 # target to generate assembly for a file
 game_start.c.s:
-	$(MAKE) -f CMakeFiles\Software_project_19476496.dir\build.make CMakeFiles/Software_project_19476496.dir/game_start.c.s
+	$(MAKE) -f CMakeFiles\19476496_Softwareproject_2.dir\build.make CMakeFiles/19476496_Softwareproject_2.dir/game_start.c.s
 .PHONY : game_start.c.s
 
 input_output.obj: input_output.c.obj
@@ -209,7 +209,7 @@ input_output.obj: input_output.c.obj
 
 # target to build an object file
 input_output.c.obj:
-	$(MAKE) -f CMakeFiles\Software_project_19476496.dir\build.make CMakeFiles/Software_project_19476496.dir/input_output.c.obj
+	$(MAKE) -f CMakeFiles\19476496_Softwareproject_2.dir\build.make CMakeFiles/19476496_Softwareproject_2.dir/input_output.c.obj
 .PHONY : input_output.c.obj
 
 input_output.i: input_output.c.i
@@ -218,7 +218,7 @@ input_output.i: input_output.c.i
 
 # target to preprocess a source file
 input_output.c.i:
-	$(MAKE) -f CMakeFiles\Software_project_19476496.dir\build.make CMakeFiles/Software_project_19476496.dir/input_output.c.i
+	$(MAKE) -f CMakeFiles\19476496_Softwareproject_2.dir\build.make CMakeFiles/19476496_Softwareproject_2.dir/input_output.c.i
 .PHONY : input_output.c.i
 
 input_output.s: input_output.c.s
@@ -227,7 +227,7 @@ input_output.s: input_output.c.s
 
 # target to generate assembly for a file
 input_output.c.s:
-	$(MAKE) -f CMakeFiles\Software_project_19476496.dir\build.make CMakeFiles/Software_project_19476496.dir/input_output.c.s
+	$(MAKE) -f CMakeFiles\19476496_Softwareproject_2.dir\build.make CMakeFiles/19476496_Softwareproject_2.dir/input_output.c.s
 .PHONY : input_output.c.s
 
 main.obj: main.c.obj
@@ -236,7 +236,7 @@ main.obj: main.c.obj
 
 # target to build an object file
 main.c.obj:
-	$(MAKE) -f CMakeFiles\Software_project_19476496.dir\build.make CMakeFiles/Software_project_19476496.dir/main.c.obj
+	$(MAKE) -f CMakeFiles\19476496_Softwareproject_2.dir\build.make CMakeFiles/19476496_Softwareproject_2.dir/main.c.obj
 .PHONY : main.c.obj
 
 main.i: main.c.i
@@ -245,7 +245,7 @@ main.i: main.c.i
 
 # target to preprocess a source file
 main.c.i:
-	$(MAKE) -f CMakeFiles\Software_project_19476496.dir\build.make CMakeFiles/Software_project_19476496.dir/main.c.i
+	$(MAKE) -f CMakeFiles\19476496_Softwareproject_2.dir\build.make CMakeFiles/19476496_Softwareproject_2.dir/main.c.i
 .PHONY : main.c.i
 
 main.s: main.c.s
@@ -254,7 +254,7 @@ main.s: main.c.s
 
 # target to generate assembly for a file
 main.c.s:
-	$(MAKE) -f CMakeFiles\Software_project_19476496.dir\build.make CMakeFiles/Software_project_19476496.dir/main.c.s
+	$(MAKE) -f CMakeFiles\19476496_Softwareproject_2.dir\build.make CMakeFiles/19476496_Softwareproject_2.dir/main.c.s
 .PHONY : main.c.s
 
 print_board.obj: print_board.c.obj
@@ -263,7 +263,7 @@ print_board.obj: print_board.c.obj
 
 # target to build an object file
 print_board.c.obj:
-	$(MAKE) -f CMakeFiles\Software_project_19476496.dir\build.make CMakeFiles/Software_project_19476496.dir/print_board.c.obj
+	$(MAKE) -f CMakeFiles\19476496_Softwareproject_2.dir\build.make CMakeFiles/19476496_Softwareproject_2.dir/print_board.c.obj
 .PHONY : print_board.c.obj
 
 print_board.i: print_board.c.i
@@ -272,7 +272,7 @@ print_board.i: print_board.c.i
 
 # target to preprocess a source file
 print_board.c.i:
-	$(MAKE) -f CMakeFiles\Software_project_19476496.dir\build.make CMakeFiles/Software_project_19476496.dir/print_board.c.i
+	$(MAKE) -f CMakeFiles\19476496_Softwareproject_2.dir\build.make CMakeFiles/19476496_Softwareproject_2.dir/print_board.c.i
 .PHONY : print_board.c.i
 
 print_board.s: print_board.c.s
@@ -281,7 +281,7 @@ print_board.s: print_board.c.s
 
 # target to generate assembly for a file
 print_board.c.s:
-	$(MAKE) -f CMakeFiles\Software_project_19476496.dir\build.make CMakeFiles/Software_project_19476496.dir/print_board.c.s
+	$(MAKE) -f CMakeFiles\19476496_Softwareproject_2.dir\build.make CMakeFiles/19476496_Softwareproject_2.dir/print_board.c.s
 .PHONY : print_board.c.s
 
 print_stack.obj: print_stack.c.obj
@@ -290,7 +290,7 @@ print_stack.obj: print_stack.c.obj
 
 # target to build an object file
 print_stack.c.obj:
-	$(MAKE) -f CMakeFiles\Software_project_19476496.dir\build.make CMakeFiles/Software_project_19476496.dir/print_stack.c.obj
+	$(MAKE) -f CMakeFiles\19476496_Softwareproject_2.dir\build.make CMakeFiles/19476496_Softwareproject_2.dir/print_stack.c.obj
 .PHONY : print_stack.c.obj
 
 print_stack.i: print_stack.c.i
@@ -299,7 +299,7 @@ print_stack.i: print_stack.c.i
 
 # target to preprocess a source file
 print_stack.c.i:
-	$(MAKE) -f CMakeFiles\Software_project_19476496.dir\build.make CMakeFiles/Software_project_19476496.dir/print_stack.c.i
+	$(MAKE) -f CMakeFiles\19476496_Softwareproject_2.dir\build.make CMakeFiles/19476496_Softwareproject_2.dir/print_stack.c.i
 .PHONY : print_stack.c.i
 
 print_stack.s: print_stack.c.s
@@ -308,7 +308,7 @@ print_stack.s: print_stack.c.s
 
 # target to generate assembly for a file
 print_stack.c.s:
-	$(MAKE) -f CMakeFiles\Software_project_19476496.dir\build.make CMakeFiles/Software_project_19476496.dir/print_stack.c.s
+	$(MAKE) -f CMakeFiles\19476496_Softwareproject_2.dir\build.make CMakeFiles/19476496_Softwareproject_2.dir/print_stack.c.s
 .PHONY : print_stack.c.s
 
 # Help Target
@@ -317,15 +317,15 @@ help:
 	@echo ... all (the default if no target is provided)
 	@echo ... clean
 	@echo ... depend
-	@echo ... Software_project_19476496
+	@echo ... 19476496_Softwareproject_2
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... change_stack.obj
 	@echo ... change_stack.i
 	@echo ... change_stack.s
-	@echo ... game_init.h.obj
-	@echo ... game_init.h.i
-	@echo ... game_init.h.s
+	@echo ... game_init.obj
+	@echo ... game_init.i
+	@echo ... game_init.s
 	@echo ... game_start.obj
 	@echo ... game_start.i
 	@echo ... game_start.s

@@ -12,7 +12,7 @@ int main() {
 
     initialize_players(players);        //function call to init_players asks users basic info and initialises variables
     initialize_board(board);            //init_board is a function used to set each tile of the board to empty red or green
-    game_Start(board,players);
+    game_Start(board,players);          //game start compre
     printf("Thanks for playing");
     return 0;
 }

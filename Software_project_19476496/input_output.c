@@ -1,8 +1,10 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "input_output.h"
+
 //select piece function is the main function which does the heavy work
 //on user location and moving stacks and conveying this info to the user
-#include "print_board.h"
-#include "input_output.h"
-#include <stdio.h>
 void select_piece(square board[8][8], player players[],int cur)
 {
     players[cur].destination_piece[0] = 4; //initializing values to display on screen the original position
@@ -42,6 +44,37 @@ void select_piece(square board[8][8], player players[],int cur)
             case ('d'):
                 players[cur].destination_piece[1]++;
                 break;
+
+            case ('y')://if the user enters y they wish to split a stack and move n pieces from that stack
+                if (board[players[cur].destination_piece[0]][players[cur].destination_piece[1]].stack == NULL)
+                {
+                    printf("||||You cannot choose an empty square||||\n"); //making sure users dont try to pick empty or invalid squares
+                    break;
+                }
+                if (board[players[cur].destination_piece[0]][players[cur].destination_piece[1]].stack->p_color != players[cur].player_color)
+                {
+                    printf("||You must pick a stack with the same colour as your player||\n"); //more error checking
+                    break;
+                }
+                if(board[players[cur].destination_piece[0]][players[cur].destination_piece[1]].num_pieces == 1)
+                {
+                    printf("You cannot split a stack of size one just use the normal command f to choose this stack\n");
+                    break; // technically we could but its unneccesary
+                }
+                printf("Here is the stack with end being the bottom of the stack\n");//we give the user information about whats contained in the stack
+                print_stack(&board[players[cur].destination_piece[0]][players[cur].destination_piece[1]]); //prints a linked list format about the stack
+                printf("Enter the n elements you want from the stack\n");
+                scanf(" %d",&split_value);
+
+                while(split_value >= board[players[cur].destination_piece[0]][players[cur].destination_piece[1]].num_pieces) {
+                    printf("You entered a value larger than or equal to the size of the current stack please try again\n");
+                    printf("Enter stack split size:"); //more error checking this time in case they go over the number of pieces in the stack
+                    scanf(" %d",&split_value);
+                    break;
+                }
+                print_split_stack(&board[players[cur].destination_piece[0]][players[cur].destination_piece[1]],split_value); //prints the stack that they choose with n elements
+                split_function(board,players,cur,split_value); //split function call will proceed to allow them to place that stack they created on another stack
+                return;
             case ('r'):
                 if (players[cur].reserves == 0)
                 {
@@ -138,8 +171,72 @@ void move_piece(square board[8][8], player players[],int cur)
                     move_count = board[players[cur].current_piece[0]][players[cur].current_piece[1]].num_pieces;
                     break;
                 }
-                //function to be created which will put piece on top of it
+
+
                 push(board, players,cur);//push function is called which puts the stack gotten in selection on to the stack in the current function
+                return;
+            default:
+                printf("Character entered was not an arrow key\n");
+                break;
+        }
+    }
+}
+
+
+
+
+void split_function(square board[8][8],player players[], int cur, int n) {
+//split works much live move piece but for part of a stack
+
+    players[cur].current_piece[0] = players[cur].destination_piece[0];
+    players[cur].current_piece[1] = players[cur].destination_piece[1];
+    char choice = 's';
+    char movement = 'g';
+    int move_count = n;
+    printf("\nChoose place to put split stack\n");
+    while (choice != 'z') {
+        if (players[cur].destination_piece[0] > 7 || players[cur].destination_piece[0] < 0 ||
+            players[cur].destination_piece[1] > 7 || players[cur].destination_piece[1] < 0 ||
+            board[players[cur].destination_piece[0]][players[cur].destination_piece[1]].type == INVALID) {
+            printf("You have moved off the board or onto an invalid piece these are not usable the cursor will be reset\n");
+            players[cur].destination_piece[0] = 4;
+            players[cur].destination_piece[1] = 4;//error checking
+        }
+
+        print_loc_board(board,players[cur], move_count);//print out board with current cursor location
+
+        printf("Enter move w a s d (f chooses current piece)\n");
+        printf("If your moves run out you will choose the piece that you landed on");
+        scanf(" %c", &movement);
+        if (move_count == 0) {//making sure the user doesnt try to move more than the designated move given to a piece when split
+            movement = 'f';
+        }
+        switch (movement) {
+            case ('w'):
+                players[cur].destination_piece[0]--;
+                move_count--;
+                break;
+            case ('s'):
+                players[cur].destination_piece[0]++;
+                move_count--;
+                break;
+            case ('a'):
+                players[cur].destination_piece[1]--;
+                move_count--;
+                break;
+            case ('d'):
+                players[cur].destination_piece[1]++;
+                move_count--;
+                break;
+            case ('f'):
+                if ((players[cur].destination_piece[0] == players[cur].current_piece[0]) &&
+                    (players[cur].destination_piece[1] == players[cur].current_piece[1])) {
+                    printf("You cant place the piece on the same place it came from\n");
+                    printf("Location and movecounts are being reset try another position\n");
+                    move_count = n; //error checking
+                    break;
+                }
+                split_stack(board,players,cur,n); //function call to split_stack adds part of the stak onto another board square
                 return;
             default:
                 printf("Character entered was not an arrow key\n");

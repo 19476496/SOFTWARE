@@ -22,3 +22,22 @@ void print_stack(square *s)
     }
     printf("END");
 }
+
+void print_split_stack(square *s,int n)
+{
+    //split stack is the same as print split stack however we bring in n as an argument to read up to a certain point
+    piece *curr = s->stack;
+    int counter=0;
+    while (counter <n) {            //we want curr points to read up to the nth value in the stack
+        if (curr->p_color == 0) {  // same process as print_stack
+            printf("RED->");
+        } else {
+            printf("GREEN->");
+        }
+        curr = curr->next;
+        counter++;
+    }
+
+    printf("END");
+
+}

@@ -7,8 +7,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-void game_Start(square board[BOARD_SIZE][BOARD_SIZE], player players[])
-{
+void game_Start(square board[BOARD_SIZE][BOARD_SIZE], player players[]) {
     bool won; //won just tracks wheter to keep playing or print win conditions
     int confirmation = 0;//confirmation
     printf("Basic rules:\n");
@@ -29,9 +28,17 @@ void game_Start(square board[BOARD_SIZE][BOARD_SIZE], player players[])
     scanf("%d", &confirmation); //gives user time to read information before continuing
 
     int count = 0;
-    while (won != true)
-        //%2 as we have 2 players
+    while (won != true) {//since there are only 2 players we use modulo 2 as we loop around count
+        if (players[count % 2].total_pieces == 0 && players[count % 2].reserves == 0) {
+            won == true;
+            printf("PLayer %d has won!! Well done %s ", ((count + 1) % 2) + 1, players[(count + 1) % 2].player_name);
+            printf("The game took %d moves in total\n", count);
+            printf("They destroyed %d of the opponents pieces and was left with %d of their own\n",
+                   players[(count + 1) % 2].destroyed, players[(count + 1) % 2].total_pieces);
+            printf("They were also left with %d reserves by the end of the game\n", players[(count + 1) % 2].reserves);
+            return;
+        }
         select_piece(board, players,(count%2));//allows user to select move reserve and split stacks
-
         count++;
     }
+}

@@ -30,7 +30,7 @@ void push(square board[8][8], player players[],int cur)
     board[players[cur].destination_piece[0]][players[cur].destination_piece[1]].stack = top;
 
     //we make sure to limit the pieces to 5 in case there were more than 5
-    //lim_5(&board[players[cur].destination_piece[0]][players[cur].destination_piece[1]],players,cur);
+    lim_5(&board[players[cur].destination_piece[0]][players[cur].destination_piece[1]],players,cur);
 
     return;
 }

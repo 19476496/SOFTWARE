@@ -149,6 +149,33 @@ game_init.h.c.s:
 	$(MAKE) -f CMakeFiles\Software_project_19476496.dir\build.make CMakeFiles/Software_project_19476496.dir/game_init.h.c.s
 .PHONY : game_init.h.c.s
 
+game_start.obj: game_start.c.obj
+
+.PHONY : game_start.obj
+
+# target to build an object file
+game_start.c.obj:
+	$(MAKE) -f CMakeFiles\Software_project_19476496.dir\build.make CMakeFiles/Software_project_19476496.dir/game_start.c.obj
+.PHONY : game_start.c.obj
+
+game_start.i: game_start.c.i
+
+.PHONY : game_start.i
+
+# target to preprocess a source file
+game_start.c.i:
+	$(MAKE) -f CMakeFiles\Software_project_19476496.dir\build.make CMakeFiles/Software_project_19476496.dir/game_start.c.i
+.PHONY : game_start.c.i
+
+game_start.s: game_start.c.s
+
+.PHONY : game_start.s
+
+# target to generate assembly for a file
+game_start.c.s:
+	$(MAKE) -f CMakeFiles\Software_project_19476496.dir\build.make CMakeFiles/Software_project_19476496.dir/game_start.c.s
+.PHONY : game_start.c.s
+
 input_output.obj: input_output.c.obj
 
 .PHONY : input_output.obj
@@ -203,6 +230,33 @@ main.c.s:
 	$(MAKE) -f CMakeFiles\Software_project_19476496.dir\build.make CMakeFiles/Software_project_19476496.dir/main.c.s
 .PHONY : main.c.s
 
+print_board.obj: print_board.c.obj
+
+.PHONY : print_board.obj
+
+# target to build an object file
+print_board.c.obj:
+	$(MAKE) -f CMakeFiles\Software_project_19476496.dir\build.make CMakeFiles/Software_project_19476496.dir/print_board.c.obj
+.PHONY : print_board.c.obj
+
+print_board.i: print_board.c.i
+
+.PHONY : print_board.i
+
+# target to preprocess a source file
+print_board.c.i:
+	$(MAKE) -f CMakeFiles\Software_project_19476496.dir\build.make CMakeFiles/Software_project_19476496.dir/print_board.c.i
+.PHONY : print_board.c.i
+
+print_board.s: print_board.c.s
+
+.PHONY : print_board.s
+
+# target to generate assembly for a file
+print_board.c.s:
+	$(MAKE) -f CMakeFiles\Software_project_19476496.dir\build.make CMakeFiles/Software_project_19476496.dir/print_board.c.s
+.PHONY : print_board.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -215,12 +269,18 @@ help:
 	@echo ... game_init.h.obj
 	@echo ... game_init.h.i
 	@echo ... game_init.h.s
+	@echo ... game_start.obj
+	@echo ... game_start.i
+	@echo ... game_start.s
 	@echo ... input_output.obj
 	@echo ... input_output.i
 	@echo ... input_output.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... print_board.obj
+	@echo ... print_board.i
+	@echo ... print_board.s
 .PHONY : help
 
 

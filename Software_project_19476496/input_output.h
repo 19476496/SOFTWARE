@@ -5,8 +5,8 @@
 #ifndef SOFTWARE_PROJECT_19476496_INPUT_OUTPUT_H
 #define SOFTWARE_PROJECT_19476496_INPUT_OUTPUT_H
 
-#include"game_init.h"
+#include "print_board.h"
 //Function to print the board
-void print_board(square board[BOARD_SIZE][BOARD_SIZE]);
+void select_piece(square board[8][8],  player players[],int cur);
 
 #endif //SOFTWARE_PROJECT_19476496_INPUT_OUTPUT_H

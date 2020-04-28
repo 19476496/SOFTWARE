@@ -3,7 +3,7 @@
 //
 
 #include <stdio.h>
-#include "input_output.h"
+#include "game_start.h"
 int main() {
 
     // declaration of the players and the board
@@ -12,7 +12,7 @@ int main() {
 
     initialize_players(players);        //function call to init_players asks users basic info and initialises variables
     initialize_board(board);            //init_board is a function used to set each tile of the board to empty red or green
-    print_board(board);
+    game_Start(board,players);
     printf("Thanks for playing");
     return 0;
 }

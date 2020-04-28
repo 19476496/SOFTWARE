@@ -4,11 +4,23 @@
 CMakeFiles/Software_project_19476496.dir/game_init.h.c.obj: ../game_init.h
 CMakeFiles/Software_project_19476496.dir/game_init.h.c.obj: ../game_init.h.c
 
+CMakeFiles/Software_project_19476496.dir/game_start.c.obj: ../game_init.h
+CMakeFiles/Software_project_19476496.dir/game_start.c.obj: ../game_start.c
+CMakeFiles/Software_project_19476496.dir/game_start.c.obj: ../game_start.h
+CMakeFiles/Software_project_19476496.dir/game_start.c.obj: ../input_output.h
+CMakeFiles/Software_project_19476496.dir/game_start.c.obj: ../print_board.h
+
 CMakeFiles/Software_project_19476496.dir/input_output.c.obj: ../game_init.h
 CMakeFiles/Software_project_19476496.dir/input_output.c.obj: ../input_output.c
-CMakeFiles/Software_project_19476496.dir/input_output.c.obj: ../input_output.h
+CMakeFiles/Software_project_19476496.dir/input_output.c.obj: ../print_board.h
 
 CMakeFiles/Software_project_19476496.dir/main.c.obj: ../game_init.h
+CMakeFiles/Software_project_19476496.dir/main.c.obj: ../game_start.h
 CMakeFiles/Software_project_19476496.dir/main.c.obj: ../input_output.h
 CMakeFiles/Software_project_19476496.dir/main.c.obj: ../main.c
+CMakeFiles/Software_project_19476496.dir/main.c.obj: ../print_board.h
+
+CMakeFiles/Software_project_19476496.dir/print_board.c.obj: ../game_init.h
+CMakeFiles/Software_project_19476496.dir/print_board.c.obj: ../print_board.c
+CMakeFiles/Software_project_19476496.dir/print_board.c.obj: ../print_board.h
 

@@ -95,11 +95,39 @@ CMakeFiles/Software_project_19476496.dir/input_output.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Software_project_19476496.dir/input_output.c.s"
 	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\redbr\CLionProjects\Software_project_19476496\input_output.c -o CMakeFiles\Software_project_19476496.dir\input_output.c.s
 
+CMakeFiles/Software_project_19476496.dir/game_start.c.obj: CMakeFiles/Software_project_19476496.dir/flags.make
+CMakeFiles/Software_project_19476496.dir/game_start.c.obj: ../game_start.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\redbr\CLionProjects\Software_project_19476496\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Software_project_19476496.dir/game_start.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Software_project_19476496.dir\game_start.c.obj   -c C:\Users\redbr\CLionProjects\Software_project_19476496\game_start.c
+
+CMakeFiles/Software_project_19476496.dir/game_start.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Software_project_19476496.dir/game_start.c.i"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\redbr\CLionProjects\Software_project_19476496\game_start.c > CMakeFiles\Software_project_19476496.dir\game_start.c.i
+
+CMakeFiles/Software_project_19476496.dir/game_start.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Software_project_19476496.dir/game_start.c.s"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\redbr\CLionProjects\Software_project_19476496\game_start.c -o CMakeFiles\Software_project_19476496.dir\game_start.c.s
+
+CMakeFiles/Software_project_19476496.dir/print_board.c.obj: CMakeFiles/Software_project_19476496.dir/flags.make
+CMakeFiles/Software_project_19476496.dir/print_board.c.obj: ../print_board.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\redbr\CLionProjects\Software_project_19476496\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/Software_project_19476496.dir/print_board.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Software_project_19476496.dir\print_board.c.obj   -c C:\Users\redbr\CLionProjects\Software_project_19476496\print_board.c
+
+CMakeFiles/Software_project_19476496.dir/print_board.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Software_project_19476496.dir/print_board.c.i"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\redbr\CLionProjects\Software_project_19476496\print_board.c > CMakeFiles\Software_project_19476496.dir\print_board.c.i
+
+CMakeFiles/Software_project_19476496.dir/print_board.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Software_project_19476496.dir/print_board.c.s"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\redbr\CLionProjects\Software_project_19476496\print_board.c -o CMakeFiles\Software_project_19476496.dir\print_board.c.s
+
 # Object files for target Software_project_19476496
 Software_project_19476496_OBJECTS = \
 "CMakeFiles/Software_project_19476496.dir/main.c.obj" \
 "CMakeFiles/Software_project_19476496.dir/game_init.h.c.obj" \
-"CMakeFiles/Software_project_19476496.dir/input_output.c.obj"
+"CMakeFiles/Software_project_19476496.dir/input_output.c.obj" \
+"CMakeFiles/Software_project_19476496.dir/game_start.c.obj" \
+"CMakeFiles/Software_project_19476496.dir/print_board.c.obj"
 
 # External object files for target Software_project_19476496
 Software_project_19476496_EXTERNAL_OBJECTS =
@@ -107,11 +135,13 @@ Software_project_19476496_EXTERNAL_OBJECTS =
 Software_project_19476496.exe: CMakeFiles/Software_project_19476496.dir/main.c.obj
 Software_project_19476496.exe: CMakeFiles/Software_project_19476496.dir/game_init.h.c.obj
 Software_project_19476496.exe: CMakeFiles/Software_project_19476496.dir/input_output.c.obj
+Software_project_19476496.exe: CMakeFiles/Software_project_19476496.dir/game_start.c.obj
+Software_project_19476496.exe: CMakeFiles/Software_project_19476496.dir/print_board.c.obj
 Software_project_19476496.exe: CMakeFiles/Software_project_19476496.dir/build.make
 Software_project_19476496.exe: CMakeFiles/Software_project_19476496.dir/linklibs.rsp
 Software_project_19476496.exe: CMakeFiles/Software_project_19476496.dir/objects1.rsp
 Software_project_19476496.exe: CMakeFiles/Software_project_19476496.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\redbr\CLionProjects\Software_project_19476496\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable Software_project_19476496.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\redbr\CLionProjects\Software_project_19476496\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable Software_project_19476496.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Software_project_19476496.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

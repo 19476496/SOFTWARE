@@ -31,7 +31,7 @@ void initialize_players(player players[PLAYERS_NUM]){
         players[0].player_color = GREEN;
         players[1].player_color = RED;
     }
-    players[0].reserves = 0; //reserves are special pieces used to
+    players[0].reserves = 0; //reserves are special pieces used to place anywhere on the board
     players[1].reserves = 0;
     players[0].destroyed = 0;
     players[1].destroyed = 0;

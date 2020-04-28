@@ -122,6 +122,33 @@ Software_project_19476496/fast:
 	$(MAKE) -f CMakeFiles\Software_project_19476496.dir\build.make CMakeFiles/Software_project_19476496.dir/build
 .PHONY : Software_project_19476496/fast
 
+change_stack.obj: change_stack.c.obj
+
+.PHONY : change_stack.obj
+
+# target to build an object file
+change_stack.c.obj:
+	$(MAKE) -f CMakeFiles\Software_project_19476496.dir\build.make CMakeFiles/Software_project_19476496.dir/change_stack.c.obj
+.PHONY : change_stack.c.obj
+
+change_stack.i: change_stack.c.i
+
+.PHONY : change_stack.i
+
+# target to preprocess a source file
+change_stack.c.i:
+	$(MAKE) -f CMakeFiles\Software_project_19476496.dir\build.make CMakeFiles/Software_project_19476496.dir/change_stack.c.i
+.PHONY : change_stack.c.i
+
+change_stack.s: change_stack.c.s
+
+.PHONY : change_stack.s
+
+# target to generate assembly for a file
+change_stack.c.s:
+	$(MAKE) -f CMakeFiles\Software_project_19476496.dir\build.make CMakeFiles/Software_project_19476496.dir/change_stack.c.s
+.PHONY : change_stack.c.s
+
 game_init.h.obj: game_init.h.c.obj
 
 .PHONY : game_init.h.obj
@@ -266,6 +293,9 @@ help:
 	@echo ... Software_project_19476496
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... change_stack.obj
+	@echo ... change_stack.i
+	@echo ... change_stack.s
 	@echo ... game_init.h.obj
 	@echo ... game_init.h.i
 	@echo ... game_init.h.s

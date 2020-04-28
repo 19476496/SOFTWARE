@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Software_project_19476496.dir/change_stack.c.obj"
   "CMakeFiles/Software_project_19476496.dir/game_init.h.c.obj"
   "CMakeFiles/Software_project_19476496.dir/game_start.c.obj"
   "CMakeFiles/Software_project_19476496.dir/input_output.c.obj"

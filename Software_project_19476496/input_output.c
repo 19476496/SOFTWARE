@@ -127,7 +127,7 @@ void move_piece(square board[8][8], player players[],int cur)
                     break;
                 }
                 //function to be created which will put piece on top of it
-                //push(board, players,cur);//push function is called which puts the stack gotten in selection on to the stack in the current function
+                push(board, players,cur);//push function is called which puts the stack gotten in selection on to the stack in the current function
                 return;
             default:
                 printf("Character entered was not an arrow key\n");

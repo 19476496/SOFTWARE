@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "C:/Users/redbr/CLionProjects/Software_project_19476496/change_stack.c" "C:/Users/redbr/CLionProjects/Software_project_19476496/cmake-build-debug/CMakeFiles/Software_project_19476496.dir/change_stack.c.obj"
   "C:/Users/redbr/CLionProjects/Software_project_19476496/game_init.h.c" "C:/Users/redbr/CLionProjects/Software_project_19476496/cmake-build-debug/CMakeFiles/Software_project_19476496.dir/game_init.h.c.obj"
   "C:/Users/redbr/CLionProjects/Software_project_19476496/game_start.c" "C:/Users/redbr/CLionProjects/Software_project_19476496/cmake-build-debug/CMakeFiles/Software_project_19476496.dir/game_start.c.obj"
   "C:/Users/redbr/CLionProjects/Software_project_19476496/input_output.c" "C:/Users/redbr/CLionProjects/Software_project_19476496/cmake-build-debug/CMakeFiles/Software_project_19476496.dir/input_output.c.obj"

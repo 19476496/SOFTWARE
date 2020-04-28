@@ -74,6 +74,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/redbr/CLionProjects/Software_project_19476496/change_stack.c">
+			<Option target="Software_project_19476496"/>
+		</Unit>
+		<Unit filename="C:/Users/redbr/CLionProjects/Software_project_19476496/change_stack.h">
+			<Option target="Software_project_19476496"/>
+		</Unit>
 		<Unit filename="C:/Users/redbr/CLionProjects/Software_project_19476496/game_init.h">
 			<Option target="Software_project_19476496"/>
 		</Unit>
